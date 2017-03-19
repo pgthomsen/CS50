@@ -1,0 +1,14 @@
+0.  pneumonoultramicroscopicsilicovolcanoconiosis is a pneumoconiosis caused by inhalation of very fine silicate or quartz dust.
+1.  This function gets the resource usage of either the current process, the children of the current process, or the calling thread.
+2.  16
+3.  These are passed by reference because this allows for operations to be performed with them without influencing their values, and since they are used
+multiple times their values are preserved.
+4.  This function starts by going using fgetc to a character, it then checks if each charatcer is a letter or ', with ' only being allowed when it is not
+the first character in the new "word". The function then appends these letters or 's to the word, and then checks that the word is not longer
+than the longest word in the dictionary, discarding the string of characters if it is too long. If a word is found, '\0' is appended to the end to indicate
+the end of a word for future reference. The word is then fed into the check() function with the result determining whether it is mispelled or not. The
+index, or location in the word, is then reset to 0, as it is every time a new word is created, and the for loop continues running but now a new word is being
+introduced.
+5.  This function uses fgetc() because this allows an analysis on a per character basis so that non-alphabetical characters can be noticed and collections
+of characters that are not words can be ignored.
+6.  These were set as const char*s because it is risky to modify a char* because if 
