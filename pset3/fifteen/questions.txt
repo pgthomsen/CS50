@@ -1,0 +1,4 @@
+0. The framework allows games of 3x3 4x4 5x5 6x6 7x7 8x8 and 9x9
+1. The games board is stored as a 2D array
+2. greet()
+3. init() draw() move() and won()
