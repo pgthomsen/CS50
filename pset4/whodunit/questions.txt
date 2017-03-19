@@ -1,0 +1,14 @@
+0. stdint.h is a header file which defines a number of different integer types of different sizes and that are both signed and unsigned.
+1. The usage of these new int types allows you specify the exact size of the variable you will be using so that different systems will not create ints of
+different sizes, while also allowing you to specify the size of your variables to a more extensive and accurate degree so that you waste less resources.
+2. BYTE is 1 byte, DWORD is 4 bytes, LONG is 4 bytes, and WORD is 2 bytes
+3. BM
+4. bfsize is the size of the entire image file, whereas bisize is simply the size of the BITMAPINFOHEADER structure.
+5. If biHeight is negative, that means that the information is stored from the top to the bottom with the origin being the top left corner.
+6. biBitCount
+7. If the file does not exist, fopen() will return NULL.
+8. This argument is always one because in every case it is used either there is only one piece of information being searched for, or there is some other
+function, such as a for loop, which accounts for the movement through the code.
+9. 3
+10. fseek() sets the position of the file pointer within the file.
+11. SEEK_CUR is the current location within the file.
