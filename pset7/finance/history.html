@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+<table class="table table-hover" align="center">
+    <thead class="thead-default">
+    <tr>
+        <th>
+            Transaction type
+        </th>
+        <th>
+            Stock
+        </th>
+        <th>
+            Quantity
+        </th>
+        <th>
+            Value per share
+        </th>
+        <th>
+            Date/time
+        </th>
+    </tr>
+    </thead>
+{% for entry in history %}
+    <tr>
+        <td>
+            {{ entry.transaction_type }}
+        </td>
+        <td>
+            {{ entry.ticker }}
+        </td>
+        <td>
+            {{ entry.quantity }}
+        </td>
+        <td>
+            {{ entry.usd_price }}
+        </td>
+        <td>
+            {{ entry.time }}
+        </td>
+    </tr>
+{% endfor %}
+</table>
+{% endblock %}

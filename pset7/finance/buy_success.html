@@ -1,0 +1,18 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Purchase Successful!
+{% endblock %}
+
+{% block main %}
+
+<div class="alert alert-info">
+    <p> name = {{ stock_name }} </p>
+    <p> ticker = {{ ticker }} </p>
+    <p> price per share = {{ price }} </p>
+</div>
+
+<div class="alert alert-success">
+    total cost = {{ total }}
+</div>
+{% endblock %}

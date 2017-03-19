@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+
+import sys
+import helpers
+
+from analyzer import Analyzer
+from termcolor import colored
+
+def main():
+
+    # ensure proper usage
+    if len(sys.argv) != 2:
+        sys.exit("Usage: ./tweets @screenname")
+    
+
+    # instantiate analyzer
+    analyzer = Analyzer()
+
+    # retrieve tweets, printing an error message and exiting if unable to
+    try:
+        tweets = helpers.get_user_timeline(screen_name= sys.argv[1], count = 50)
+    except Exception:
+        print("Profile unable to be reached")
+        exit()
+
+    # analyze each tweet, printing it out with the correct color coding along with its count
+    for tweet in tweets:
+        score = analyzer.analyze(tweet)
+        print(score, end =" ")
+        if score > 0.0:
+            print(colored(tweet, "green"))
+        elif score < 0.0:
+            print(colored(tweet, "red"))
+        else:
+            print(colored(tweet, "yellow"))
+
+if __name__ == "__main__":
+    main()
